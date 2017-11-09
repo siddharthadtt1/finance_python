@@ -23,5 +23,9 @@ plt.grid(True) # adds a grid
 # plt.axis('off') # turns axis lines and labels off
 # plt.axis('equal') # leads to equal scaling
 # plt.axis('scaled') # equal scaling via dimension changes
-plt.axis('tight') # Makes all data visible 
-plt.axis([0, 20, -2.5, 1]) # [xmin, xmax, ymin, ymax]
+# plt.axis('tight') # Makes all data visible 
+# plt.axis([0, 20, -2.5, 1]) # [xmin, xmax, ymin, ymax]
+
+plt.xlim(-1, 20)
+plt.ylim(  np.min(y.cumsum()) - 1
+         , np.max(y.cumsum()) + 1)
