@@ -97,23 +97,82 @@ import matplotlib.pyplot as plt
 np.random.seed(2000)
 y = np.random.standard_normal((20, 2)).cumsum(axis=0)
 
-plt.figure(figsize=(7,4))
+#plt.figure(figsize=(7,4))
+
 # draw two lines
 # plt.plot(y, 'b', lw=1.5)
 
-plt.plot(y[:, 0], 'b', lw=1.5, label='1st')
-plt.plot(y[:, 1], 'y', lw= 1.5, label='2nd')
+#plt.plot(y[:, 0], 'b', lw=1.5, label='1st')
+#plt.plot(y[:, 1], 'y', lw= 1.5, label='2nd')
 
 # draw orange circle
-plt.plot(y[:,0], 'ro')
-plt.plot(y[:, 1], 'g^')
+#plt.plot(y[:,0], 'ro')
+#plt.plot(y[:, 1], 'g^')
+#
+#plt.legend(loc=0)
+#
+#plt.grid(True)
+#plt.axis('tight')
+#plt.xlabel('index')
+#plt.ylabel('value')
+#plt.title('Simple plot')
 
+#fig, ax1 = plt.subplots()
+#plt.plot(y[:, 0], 'b', lw=1.5, label='1st')
+#plt.plot(y[:, 0], 'ro')
+#plt.grid(True)
+#plt.axis('tight')
+#plt.legend(loc=8)
+#plt.xlabel('index')
+#plt.ylabel('value 1st')
+#plt.title('Simple plot')
+#
+#ax2 = ax1.twinx()
+#plt.plot(y[:, 1], 'y', lw=1.5, label='2nd')
+#plt.plot(y[:, 1], 'g^')
+#plt.legend(loc=0)
+#plt.ylabel('value 2nd')
+
+#plt.figure(figsize=(7,5))
+#
+#plt.subplot(211)
+#plt.grid(True)
+#plt.plot(y[:, 0], 'b', lw=1.5, label='1st')
+#plt.plot(y[:, 0], 'ro', lw=1.5)
+#plt.legend(loc=0)
+#plt.axis('tight')
+#plt.xlabel('index')
+#plt.ylabel('value')
+#plt.title('Simple plot')
+#
+#plt.subplot(212)
+#plt.grid(True)
+#plt.plot(y[:, 1], 'y', lw=1.5, label='2nd')
+#plt.plot(y[:, 1], 'g^', lw=1.5)
+#plt.legend(loc=0)
+#plt.axis('tight')
+#plt.xlabel('index')
+#plt.ylabel('value')
+
+plt.figure(figsize=(9, 4))
+
+plt.subplot(121)
+plt.plot(y[:, 0], lw=1.5, label='1st')
+plt.plot(y[:, 0], 'ro')
 plt.legend(loc=0)
-
-plt.grid(True)
-plt.axis('tight')
 plt.xlabel('index')
 plt.ylabel('value')
-plt.title('Simple plot')
+plt.grid(True)
+plt.axis('tight')
+plt.title('1st Data Set')
+
+plt.subplot(122)
+plt.bar(np.arange(len(y)), y[:, 1], color='g', width=0.5, label='2nd')
+plt.grid(True)
+plt.axis('tight')
+plt.legend(loc=0)
+plt.xlabel('index')
+plt.ylabel('value')
+plt.title('2nd Data Set')
 
 
