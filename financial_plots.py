@@ -5,11 +5,12 @@ Created on Sat Nov 11 00:51:49 2017
 @author: sid
 """
 
-import matplotlib.finance as mpf
+import pandas_datareader.data as web
 
-start=(2017, 1, 1)
-end=(2017,11, 10)
 
-quotes = mpf._quotes_historical_yahoo('^GDAXI', start, end)
-quotes[:2]
+DAX = web.DataReader(name='HUL', data_source='yahoo', start='2000-1-1')
+print DAX.info()
 
+print DAX
+
+DAX['Close'].plot(figsize=(8, 5))
