@@ -15,7 +15,7 @@ Created on Tue Jan 09 10:25:32 2018
 from math import sqrt
 
 def f(x):
-    """
+    '''
         Function to calculate square of the square root of a number
         
         Parameters
@@ -43,7 +43,7 @@ def f(x):
         >>> f(10.5)
         10.5
     
-    """
+    '''
     
     if type(x)!= int and type(x)!= float:
         raise TypeError('Input does not has the right type')
